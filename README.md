@@ -35,3 +35,9 @@ To create a production build:
 ```bash
 npm run build
 ```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**Note**: The personal images, text content, and branding assets (including the favicon) are Copyright © Andrew Jeter and are not covered by the MIT License. You may not use them without explicit permission.
