@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand: #f5e6d3;
+  /* Light desert tan background */
+  --color-terracotta: #c05621;
+  /* Darker orange for contrast on light bg */
+  --color-ucsd-blue: #00629B;
+  /* UC San Diego Blue */
+  --color-ocean: #2c7da0;
+  /* Rich blue */
+  --color-sunset: #ed8936;
+  /* Orange accent */
+  --color-desert-dark: #4a3b32;
+  /* Dark brown for text */
+  --color-ocean-dark: #1a365d;
+  /* Dark blue for text */
+
+  --font-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
