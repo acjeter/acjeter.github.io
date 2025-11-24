@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                     <a href="/projects" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                         View Projects
                     </a>
-                    <a href="https://linkedin.com/in/andrew-jeter" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
+                    <a href="https://linkedin.com/in/andrewcjeter" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
                         LinkedIn
                     </a>
                     <a href="https://github.com/acjeter" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
