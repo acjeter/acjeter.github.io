@@ -32,17 +32,30 @@ const Home: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.8 }}
-                    className="flex gap-4"
+                    className="flex flex-col items-center gap-6"
                 >
-                    <a href="/projects" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
-                        View Projects
-                    </a>
-                    <a href="https://linkedin.com/in/andrewcjeter" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/acjeter" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
-                        GitHub
-                    </a>
+                    {/* Navigation Buttons */}
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <a href="/projects" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            View Projects
+                        </a>
+                        <a href="/courses" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            View Courses
+                        </a>
+                    </div>
+
+                    {/* Social Links */}
+                    <div className="flex flex-wrap justify-center gap-4">
+                        <a href='mailto:andrewcjeter@gmail.com' className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
+                            Email
+                        </a>
+                        <a href="https://linkedin.com/in/andrewcjeter" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/acjeter" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border border-ucsd-blue text-ucsd-blue rounded-lg hover:bg-ucsd-blue/10 transition-colors duration-300">
+                            GitHub
+                        </a>
+                    </div>
                 </motion.div>
             </div>
         </div>
