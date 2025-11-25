@@ -26,7 +26,11 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      
+      # Used to prevent workflow from being blocked by Jekyll
+      - run: touch dist/.nojekyll
 
+      # Used to prevent 404 errors on pages other than the home page
       - run: cp dist/index.html dist/404.html
 
       - uses: actions/upload-pages-artifact@v4
