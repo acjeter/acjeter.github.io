@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ResumePdf from '../assets/ResumeDec2025.pdf';
 
 const Home: React.FC = () => {
+    useEffect(() => {
+        document.title = 'Home – Andrew Jeter';
+    }, []);
     return (
         <div className="min-h-screen bg-sand text-desert-dark font-sans overflow-hidden relative">
             {/* Background Elements */}
