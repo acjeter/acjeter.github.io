@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
 
 const Projects: React.FC = () => {
     useEffect(() => {
@@ -8,7 +9,7 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-sand text-desert-dark p-10">
+        <Layout showGradients={true} className="p-10">
             <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -63,7 +64,7 @@ const Projects: React.FC = () => {
                     ← Back to Home
                 </Link>
             </div>
-        </div>
+        </Layout>
     );
 };
 
