@@ -2,9 +2,19 @@
 
 Personal portfolio website for Andrew Jeter, a Senior Computer Engineering B.S. student at UC San Diego.
 
+Live site: https://www.andrewcjeter.com
+
 ## Overview
 
-This website serves as a digital portfolio and introduction, showcasing my background, projects, and journey in San Diego, CA. The design pays homage to San Diego and my love of the desert with a "Desert Meets Ocean" aesthetic.
+This website serves as a digital portfolio and introduction, showcasing my background, projects, and journey at UC San Diego in San Diego, CA. The design pays homage to San Diego and my love of the desert with a "Desert Meets Ocean" aesthetic.
+
+## Features
+
+- Smooth animations using Framer Motion
+- Clean, simple, and responsive design
+- Easy navigation with React Router
+- TypeScript for type safety (I'm still learning TS and JS)
+- GitHub Actions CI/CD pipeline deploying to GitHub Pages
 
 ## Tech Stack
 
@@ -35,6 +45,14 @@ To create a production build:
 ```bash
 npm run build
 ```
+
+## Deployment
+
+The website is deployed via GitHub Pages using GitHub Actions. 
+
+- On push to `main`, a GitHub Actions workflow runs `npm ci` and `npm run build`.
+- The built `dist/` folder is uploaded as a Pages artifact and served at `https://www.andrewcjeter.com`.
+- A `404.html` file is generated as a fallback so that React Router routes work on refresh.
 
 ## License
 
