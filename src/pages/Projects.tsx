@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const Projects: React.FC = () => {
+    useEffect(() => {
+        document.title = 'Projects - Andrew Jeter';
+    }, []);
+
     return (
         <div className="min-h-screen bg-sand text-desert-dark p-10">
             <motion.h2
@@ -36,9 +41,9 @@ const Projects: React.FC = () => {
                             <span className="px-2 py-1 text-xs border border-ucsd-blue text-ucsd-blue font-medium rounded">Framer Motion</span>
                         </div>
                         <div className="flex gap-4">
-                            <a href="https://github.com/acjeter/acjeter.github.io" target="_blank" rel="noopener noreferrer" className="text-terracotta hover:text-sunset font-medium transition-colors">
+                            <Link to="https://github.com/acjeter/acjeter.github.io" target="_blank" rel="noopener noreferrer" className="text-terracotta hover:text-sunset font-medium transition-colors">
                                 View Source →
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>
@@ -54,7 +59,9 @@ const Projects: React.FC = () => {
                 </motion.div>
             </div>
             <div className="mt-8">
-                <a href="/" className="text-ocean hover:text-ocean-dark underline">← Back to Home</a>
+                <Link to="/" className="text-ocean hover:text-ocean-dark underline">
+                    ← Back to Home
+                </Link>
             </div>
         </div>
     );

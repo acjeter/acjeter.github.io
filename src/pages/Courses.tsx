@@ -6,7 +6,8 @@
  * via any medium, is strictly prohibited.
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 interface Course {
@@ -158,6 +159,9 @@ const quarters: Quarter[] = [
 ];
 
 const Courses: React.FC = () => {
+    useEffect(() => {
+        document.title = 'Courses – Andrew Jeter';
+    }, []);
     return (
         <div className="min-h-screen bg-sand text-desert-dark p-10">
             <motion.h2
@@ -213,10 +217,15 @@ const Courses: React.FC = () => {
                 ))}
             </div>
 
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
                 <a href="/" className="text-ucsd-blue hover:text-terracotta transition-colors underline decoration-dotted">
                     Back to Home
                 </a>
+            </div> */}
+            <div className="text-center mt-12">
+                <Link to="/" className="text-ocean hover:text-ocean-dark underline">
+                    ← Back to Home
+                </Link>
             </div>
         </div>
     );
