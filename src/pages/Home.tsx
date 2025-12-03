@@ -44,6 +44,9 @@ const Home: React.FC = () => {
                         <Link to="/projects" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Projects
                         </Link>
+                        <Link to={ResumePdf} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            View Resume
+                        </Link>
                         <Link to="/courses" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Courses
                         </Link>
