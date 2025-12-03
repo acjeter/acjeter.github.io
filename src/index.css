@@ -2,19 +2,14 @@
 
 @theme {
   --color-sand: #f5e6d3;
-  /* Light desert tan background */
   --color-terracotta: #c05621;
-  /* Darker orange for contrast on light bg */
   --color-ucsd-blue: #00629B;
-  /* UC San Diego Blue */
   --color-ocean: #2c7da0;
-  /* Rich blue */
   --color-sunset: #ed8936;
-  /* Orange accent */
   --color-desert-dark: #4a3b32;
-  /* Dark brown for text */
   --color-ocean-dark: #1a365d;
-  /* Dark blue for text */
+  --color-sage: #8a9a5b;
+  /* Re-adding sage as it was missing from the theme block */
 
   --font-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
