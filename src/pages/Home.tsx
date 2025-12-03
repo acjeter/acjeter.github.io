@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ResumePdf from '../assets/ResumeDec2025.pdf';
 
 const Home: React.FC = () => {
     return (
@@ -38,6 +39,9 @@ const Home: React.FC = () => {
                     <div className="flex flex-wrap justify-center gap-4">
                         <a href="/projects" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Projects
+                        </a>
+                        <a href={ResumePdf} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            View Resume
                         </a>
                         <a href="/courses" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Courses
