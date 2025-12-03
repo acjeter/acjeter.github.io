@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import ResumePdf from '../assets/ResumeDec2025.pdf';
 
 const Home: React.FC = () => {
     useEffect(() => {
@@ -42,6 +43,9 @@ const Home: React.FC = () => {
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link to="/projects" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Projects
+                        </Link>
+                        <Link to={ResumePdf} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            View Resume
                         </Link>
                         <Link to="/courses" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Courses
