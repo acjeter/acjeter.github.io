@@ -7,6 +7,7 @@ interface Project {
     status: 'Active' | 'Completed' | 'Archived';
     description: string;
     tags: string[];
+    affiliation: string;
     link: string;
     linkText: string;
 }
@@ -18,44 +19,49 @@ const projects: Project[] = [
         status: 'Active',
         description: 'A personal portfolio website built to showcase my academic and professional journey. Designed with a custom "San Diego" theme reflecting my background. Features a responsive design, smooth animations, and a modern tech stack.',
         tags: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+        affiliation: 'Personal',
         link: 'https://github.com/acjeter/acjeter.github.io',
         linkText: 'View Source Code on GitHub →'
     },
     // CSE 118 Final Project
     {
-        title: 'HoloLens ASL Translator | CSE 118 Project',
+        title: 'HoloLens ASL Translator',
         status: 'Active',
         description: 'A HoloLens application built to translate specific American Sign Language into text using computer vision and machine learning. Our AI model was trained on a dataset of ASL frames, and we are currently in the process of refining it to be able to train on our own dataset generated from the HoloLens. Our HoloLens team is working on utilizing a geofenced box as a space for where the ASL input data will be collected. Another primary learning objective is to efficiently develop our project in a team following Agile with Scrum methodology, and using GitLab for version control.',
         tags: ['Python', 'Unity', 'HoloLens', 'HTML', 'TCP/IP', 'Machine Learning', 'Agile', 'Scrum', 'Git', 'GitLab'],
+        affiliation: 'CSE 118 Ubiquitous Computing Final Project',
         link: 'https://github.com/acjeter/CSE118_Final_Project',
         linkText: 'View Source Code on GitHub →'
     },
     // CSE 110 Final Project
     {
-        title: 'Basketball Physics Game | CSE 110 Project',
-        status: 'Active',
+        title: 'Basketball Physics Game',
+        status: 'Completed',
         description: 'A basketball physics game built to simulate the physics of throwing a basketball. The main intention of this project was to learn how to develop software in a team, using Agile with Scrum methodology, using Git heavily for version control, and using Projects to manage issues and tasks.',
         tags: ['React', 'Konva', 'TypeScript', 'HTML', 'Agile', 'Scrum', 'Git', 'Projects'],
+        affiliation: 'CSE 110 Software Engineering Final Project',
         link: 'https://github.com/CSE110-Coblenz/cse-110-project-team-10',
         linkText: 'View Source Code on GitHub →'
     },
     // CSE 167 Final Project
     {
-        title: 'Ray Tracer | CSE 167 Final Project',
+        title: 'Ray Tracer',
         //term: 'Winter 2025',
         status: 'Completed',
         description: 'A ray tracer built to render a scene of a reflective sphere inside of a colored box, with a camera and light sources. Working in pairs, we used C++ and C to implement the ray tracer, and used OpenGL to render the scene.',
         tags: ['C++', 'C', 'OpenGL', 'Computer Graphics'],
+        affiliation: 'CSE 167 Computer Graphics Final Project',
         link: 'https://github.com/acjeter/CSE167_Final_Project',
         linkText: 'Available on Request; Unable to Publicly Share.'
     },
     // ECE 111 Final Project
     {
-        title: 'Simplified SHA256 & Bitcoin Hash | ECE 111 Final Project',
+        title: 'Simplified SHA256 & Bitcoin Hash',
         //term: 'Special Summer Session 2025',
         status: 'Completed',
         description: 'A SHA256 hasher and Bitcoin hashing algorithm built to simulate the process of mining a block in the Bitcoin network. I used SystemVerilog to implement the SHA256 basic non-optimized version, then optimized my SHA256 implementation using parallel hashing for speedups of up to 156%. Then, I implemented a Bitcoin hashing algorithm with eight nonces using my optimized SHA256 implementation. I used Quartus Prime Lite to create the design, RTL Synthesis to synthesize my design, and ModelSim to simulate the design.',
         tags: ['SystemVerilog', 'RTL Synthesis', 'Quartus Prime Lite', 'ModelSim'],
+        affiliation: 'ECE 111 Advanced Digital Design Project',
         link: '',
         linkText: 'Available on Request; Unable to Publicly Share.'
     }
@@ -93,6 +99,9 @@ const Projects: React.FC = () => {
                                     {project.status}
                                 </span>
                             </div>
+                            <p className="text-desert-dark/80 mb-6 leading-relaxed">
+                                {project.affiliation}
+                            </p>
                             <p className="text-desert-dark/80 mb-6 leading-relaxed">
                                 {project.description}
                             </p>
