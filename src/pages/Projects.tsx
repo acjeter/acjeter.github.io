@@ -26,7 +26,7 @@ const projects: Project[] = [
         title: 'HoloLens ASL Translator | CSE 118 Project',
         status: 'Active',
         description: 'A HoloLens application built to translate specific American Sign Language into text using computer vision and machine learning. Our AI model was trained on a dataset of ASL frames, and we are currently in the process of refining it to be able to train on our own dataset generated from the HoloLens. Our HoloLens team is working on utilizing a geofenced box as a space for where the ASL input data will be collected. Another primary learning objective is to efficiently develop our project in a team following Agile with Scrum methodology, and using GitLab for version control.',
-        tags: ['Python', 'Unity', 'HoloLens', 'Machine Learning', 'Agile', 'Scrum', 'Git', 'Projects', 'GitLab'],
+        tags: ['Python', 'Unity', 'HoloLens', 'HTML', 'TCP/IP', 'Machine Learning', 'Agile', 'Scrum', 'Git', 'GitLab'],
         link: 'https://github.com/acjeter/CSE118_Final_Project',
         linkText: 'View Source Code on GitHub →'
     },
@@ -44,7 +44,7 @@ const projects: Project[] = [
         title: 'Ray Tracer | CSE 167 Final Project',
         //term: 'Winter 2025',
         status: 'Completed',
-        description: 'A ray tracer built to render a scene of a reflective sphere inside of a colored box, with a camera and light sources.',
+        description: 'A ray tracer built to render a scene of a reflective sphere inside of a colored box, with a camera and light sources. Working in pairs, we used C++ and C to implement the ray tracer, and used OpenGL to render the scene.',
         tags: ['C++', 'C', 'OpenGL', 'Computer Graphics'],
         link: 'https://github.com/acjeter/CSE167_Final_Project',
         linkText: 'Available on Request; Unable to Publicly Share.'
@@ -54,7 +54,7 @@ const projects: Project[] = [
         title: 'Simplified SHA256 & Bitcoin Hash | ECE 111 Final Project',
         //term: 'Special Summer Session 2025',
         status: 'Completed',
-        description: 'A SHA256 hasher and Bitcoin hashing algorithm built to simulate the process of mining a block in the Bitcoin network.',
+        description: 'A SHA256 hasher and Bitcoin hashing algorithm built to simulate the process of mining a block in the Bitcoin network. I used SystemVerilog to implement the SHA256 basic non-optimized version, then optimized my SHA256 implementation using parallel hashing for speedups of up to 156%. Then, I implemented a Bitcoin hashing algorithm with eight nonces using my optimized SHA256 implementation. I used Quartus Prime Lite to create the design, RTL Synthesis to synthesize my design, and ModelSim to simulate the design.',
         tags: ['SystemVerilog', 'RTL Synthesis', 'Quartus Prime Lite', 'ModelSim'],
         link: '',
         linkText: 'Available on Request; Unable to Publicly Share.'
