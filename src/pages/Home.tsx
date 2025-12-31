@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ResumePdf from '../assets/ResumeDec2025.pdf';
+import Terminal from '../components/Terminal';
 
 const Home: React.FC = () => {
     useEffect(() => {
@@ -66,7 +67,9 @@ const Home: React.FC = () => {
                     </div>
                 </motion.div>
             </div>
-        </div>
+
+            <Terminal />
+        </div >
     );
 };
 
