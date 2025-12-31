@@ -26,7 +26,7 @@ const projects: Project[] = [
     // CSE 118 Final Project
     {
         title: 'HoloLens ASL Translator',
-        status: 'Active',
+        status: 'Completed',
         description: 'A HoloLens application built to translate specific American Sign Language into text using computer vision and machine learning. Our AI model was trained on a dataset of ASL frames, and we are currently in the process of refining it to be able to train on our own dataset generated from the HoloLens. Our HoloLens team is working on utilizing a geofenced box as a space for where the ASL input data will be collected. Another primary learning objective is to efficiently develop our project in a team following Agile with Scrum methodology, and using GitLab for version control.',
         tags: ['Python', 'Unity', 'HoloLens', 'HTML', 'TCP/IP', 'Machine Learning', 'Agile', 'Scrum', 'Git', 'GitLab'],
         affiliation: 'CSE 118 Ubiquitous Computing Final Project',
