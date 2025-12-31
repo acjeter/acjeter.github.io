@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import BackButton from '../components/BackButton';
 
 interface Project {
     title: string;
@@ -73,11 +74,12 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-sand text-desert-dark p-10">
+        <div className="min-h-screen bg-sand text-desert-dark p-10 relative">
+            <BackButton />
             <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="text-4xl font-bold mb-8 text-terracotta"
+                className="text-4xl font-bold mb-8 text-terracotta text-center"
             >
                 Projects
             </motion.h2>
@@ -130,11 +132,6 @@ const Projects: React.FC = () => {
                 >
                     <p>More projects coming soon...</p>
                 </motion.div>
-            </div>
-            <div className="mt-8">
-                <Link to="/" className="text-ocean hover:text-ocean-dark underline">
-                    ← Back to Home
-                </Link>
             </div>
         </div>
     );

@@ -7,8 +7,8 @@
  */
 
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import BackButton from '../components/BackButton';
 
 interface Course {
     id: string;
@@ -163,7 +163,8 @@ const Courses: React.FC = () => {
         document.title = 'Courses – Andrew Jeter';
     }, []);
     return (
-        <div className="min-h-screen bg-sand text-desert-dark p-10">
+        <div className="min-h-screen bg-sand text-desert-dark p-10 relative">
+            <BackButton />
             <motion.h2
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -222,11 +223,6 @@ const Courses: React.FC = () => {
                     Back to Home
                 </a>
             </div> */}
-            <div className="text-center mt-12">
-                <Link to="/" className="text-ocean hover:text-ocean-dark underline">
-                    ← Back to Home
-                </Link>
-            </div>
         </div>
     );
 };
