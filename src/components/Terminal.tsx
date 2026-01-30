@@ -103,16 +103,17 @@ const Terminal: React.FC = () => {
                     e.stopPropagation(); // Prevent immediate closing
                     setIsOpen(!isOpen);
                 }}
-                className="fixed bottom-6 right-6 p-4 bg-desert-dark text-sand rounded-full shadow-lg hover:bg-terracotta transition-colors z-50 border-2 border-sand/20"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                className="fixed bottom-6 right-6 px-6 py-3 bg-terracotta text-white rounded-xl shadow-lg hover:bg-sunset transition-colors z-50 flex items-center gap-2 font-mono font-bold"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 aria-label="Open Terminal"
             >
                 {/* Simple Terminal Icon SVG */}
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="4 17 10 11 4 5"></polyline>
                     <line x1="12" y1="19" x2="20" y2="19"></line>
                 </svg>
+                <span>Terminal</span>
             </motion.button>
 
             {/* Terminal Window Overlay */}
