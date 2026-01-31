@@ -99,13 +99,16 @@ const Terminal: React.FC = () => {
         <>
             {/* Toggle Button */}
             <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.8 }}
                 onClick={(e) => {
                     e.stopPropagation(); // Prevent immediate closing
                     setIsOpen(!isOpen);
                 }}
-                className="fixed bottom-6 right-6 p-4 bg-desert-dark text-sand rounded-full shadow-lg hover:bg-terracotta transition-colors z-50 border-2 border-sand/20"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                className="fixed bottom-6 right-6 px-6 py-3 bg-terracotta text-white rounded-xl shadow-lg hover:bg-sunset transition-colors z-50 flex items-center gap-2 font-mono"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 aria-label="Open Terminal"
             >
                 {/* Simple Terminal Icon SVG */}
