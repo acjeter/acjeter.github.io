@@ -44,6 +44,16 @@ const projects: Project[] = [
         link: 'https://github.com/acjeter/CSE118_Final_Project',
         linkText: 'View Source Code on GitHub'
     },
+    // CSE 141L RISC-Style ISA Processor (AJUSH)
+    {
+        title: 'RISC-Style ISA Processor (AJUSH)',
+        status: 'Completed',
+        description: 'Designed and verified a custom 9-bit, 8-bit-datapath load/store RISC-style processor (AJUSH) including a PC jump LUT, load/store DMEM interface, and start/done multi-program control. Built and validated a Python assembler by executing workloads for closest-pair Hamming distance (min/max), and signed shift-and-add multiplication (2-term + 3-term, 16/24-bit results).',
+        tags: ['SystemVerilog', 'Python', 'Quartus Prime Lite', 'ModelSim', 'Git', 'RISC Architecture'],
+        affiliation: 'CSE 141L Project in Computer Architecture',
+        link: '',
+        linkText: 'Available on Request; Unable to Publicly Share.'
+    },
     // CSE 110 Final Project
     {
         title: 'Basketball Physics Game',
