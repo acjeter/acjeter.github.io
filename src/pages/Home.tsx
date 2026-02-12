@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ResumePdf from '../assets/ResumeSWJan2026.pdf';
 import Terminal from '../components/Terminal';
 
 const Home: React.FC = () => {
@@ -45,9 +44,9 @@ const Home: React.FC = () => {
                         <Link to="/projects" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Projects
                         </Link>
-                        <Link to={ResumePdf} target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        <a href="/Andrew-Jeter-Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Resume
-                        </Link>
+                        </a>
                         <Link to="/courses" className="px-6 py-3 bg-terracotta text-white rounded-lg hover:bg-sunset transition-colors duration-300 shadow-lg hover:shadow-xl">
                             View Courses
                         </Link>
