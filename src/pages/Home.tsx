@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ResumePdf from '../assets/ResumeDec2025.pdf';
+import ResumePdf from '../assets/ResumeSWJan2026.pdf';
 import Terminal from '../components/Terminal';
 
 const Home: React.FC = () => {
