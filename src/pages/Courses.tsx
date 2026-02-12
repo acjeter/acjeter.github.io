@@ -155,7 +155,17 @@ const quarters: Quarter[] = [
             { id: 'MATH 255', title: 'SD City College: Differential Equations' }
         ]
     },
-    { term: 'Fall', year: '2025', courses: [] },
+    {
+        term: 'Fall',
+        year: '2025',
+        courses: [
+            { id: 'CSE 110', title: 'Software Engineering' },
+            { id: 'CSE 118', title: 'Ubiquitous Computing' },
+            { id: 'CSE 132A', title: 'Database System Principles' },
+            { id: 'CSE 141L', title: 'Project in Computer Architecture' },
+            { id: 'CSE 198', title: 'Direct Group Study: IEEE-Eta Kappa Nu Outreach' }
+        ]
+    },
 ];
 
 const Courses: React.FC = () => {
