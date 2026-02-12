@@ -19,10 +19,20 @@ const projects: Project[] = [
         title: 'Portfolio Website',
         status: 'Active',
         description: 'A personal portfolio website built to showcase my academic and professional journey. Designed with a custom "San Diego" theme reflecting my background. Features a responsive design, smooth animations, and a modern tech stack.',
-        tags: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+        tags: ['React', 'TypeScript', 'Tailwind CSS', 'Cloudflare', 'GitHub Pages'],
         affiliation: 'Personal',
         link: 'https://github.com/acjeter/acjeter.github.io',
-        linkText: 'View Source Code on GitHub →'
+        linkText: 'View Source Code on GitHub'
+    },
+    // CSE 198 Course Website
+    {
+        title: 'CSE 198: HKN Outreach Course Website',
+        status: 'Active',
+        description: 'A course website for CSE 198: HKN Outreach, a course that enables students to develop and present CSE lessons to socioeconomically disavantaged K-12 San Diego students.',
+        tags: ['JustTheDocs', 'Markdown', 'Jekyll', 'HTML', 'GitHub Pages'],
+        affiliation: 'CSE 198: HKN Outreach',
+        link: 'https://www.andrewcjeter.com/cse198-wi26',
+        linkText: 'View Course Website'
     },
     // CSE 118 Final Project
     {
@@ -32,7 +42,7 @@ const projects: Project[] = [
         tags: ['Python', 'Unity', 'HoloLens', 'HTML', 'TCP/IP', 'Machine Learning', 'Agile', 'Scrum', 'Git', 'GitLab'],
         affiliation: 'CSE 118 Ubiquitous Computing Final Project',
         link: 'https://github.com/acjeter/CSE118_Final_Project',
-        linkText: 'View Source Code on GitHub →'
+        linkText: 'View Source Code on GitHub'
     },
     // CSE 110 Final Project
     {
@@ -42,7 +52,7 @@ const projects: Project[] = [
         tags: ['React', 'Konva', 'TypeScript', 'HTML', 'Agile', 'Scrum', 'Git', 'Projects'],
         affiliation: 'CSE 110 Software Engineering Final Project',
         link: 'https://github.com/CSE110-Coblenz/cse-110-project-team-10',
-        linkText: 'View Source Code on GitHub →'
+        linkText: 'View Source Code on GitHub'
     },
     // CSE 167 Final Project
     {
