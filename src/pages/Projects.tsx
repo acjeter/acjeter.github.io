@@ -31,7 +31,7 @@ const projects: Project[] = [
         description: 'A course website for CSE 198: HKN Outreach, a course that enables students to develop and present CSE lessons to socioeconomically disavantaged K-12 San Diego students. The website is built using JustTheDocs, a Jekyll theme for documentation websites.',
         tags: ['JustTheDocs', 'Markdown', 'Jekyll', 'HTML', 'GitHub Pages'],
         affiliation: 'CSE 198: HKN Outreach',
-        link: 'https://www.andrewcjeter.com/cse198-wi26',
+        link: 'https://www.andrewcjeter.com/cse198-sp26',
         linkText: 'View Course Website'
     },
     // CSE 118 Final Project

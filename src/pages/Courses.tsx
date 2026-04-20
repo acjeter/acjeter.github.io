@@ -166,6 +166,16 @@ const quarters: Quarter[] = [
             { id: 'CSE 198', title: 'Direct Group Study: IEEE-Eta Kappa Nu Outreach' }
         ]
     },
+    {
+        term: 'Winter',
+        year: '2026',
+        courses: [
+            { id: 'ECE 65', title: 'Components & Circuits Laboratory' },
+            { id: 'ECE 101', title: 'Linear Systems Fundamentals' },
+            { id: 'CSE 198', title: 'Direct Group Study: IEEE-Eta Kappa Nu Outreach' }
+        ]
+    },
+
 ];
 
 const Courses: React.FC = () => {
