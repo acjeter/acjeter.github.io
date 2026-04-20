@@ -30,7 +30,7 @@ const Home: React.FC = () => {
                     className="text-xl md:text-2xl text-desert-dark/80 mb-8 max-w-2xl"
                 >
                     <p className="mb-2">Senior Computer Engineering B.S. Student at <span className="text-ucsd-blue font-semibold">UC San Diego</span></p>
-                    <p className="text-lg font-medium text-terracotta mb-2">Incoming Software Engineer at Raytheon in Tucson, AZ</p>
+                    <p className="mb-2">Incoming Software Engineer at Raytheon | Summer 2026</p>
                     <p className="text-lg">San Diego, CA <span className="text-terracotta">&rarr;</span> Tucson, AZ</p>
                 </motion.div>
 
