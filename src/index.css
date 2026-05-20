@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Fraunces";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/fonts/fraunces-latin-variable.woff2") format("woff2-variations");
+}
+
 @theme {
   --color-sand-50: #fffaf1;
   --color-sand-100: #f7ead6;
@@ -43,7 +51,7 @@
   --radius-pill: 999px;
 
   --font-sans: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
-  --font-display: Georgia, "Times New Roman", serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
@@ -70,7 +78,6 @@ body {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -92,9 +99,17 @@ input {
   .app-canvas {
     min-height: 100vh;
     background:
-      radial-gradient(circle at 10% 10%, rgb(47 111 143 / 0.18), transparent 28rem),
-      radial-gradient(circle at 90% 0%, rgb(197 150 74 / 0.16), transparent 30rem),
+      linear-gradient(90deg, rgb(47 111 143 / 0.07) 1px, transparent 1px),
+      linear-gradient(0deg, rgb(47 111 143 / 0.05) 1px, transparent 1px),
+      radial-gradient(circle at 8% 9%, rgb(47 111 143 / 0.14), transparent 24rem),
+      radial-gradient(circle at 90% 0%, rgb(197 150 74 / 0.14), transparent 30rem),
       linear-gradient(135deg, var(--color-sand-50), var(--color-sand-100) 55%, #f1dfc5);
+    background-size:
+      72px 72px,
+      72px 72px,
+      auto,
+      auto,
+      auto;
     color: var(--color-text-primary);
   }
 
