@@ -9,6 +9,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import BackButton from '../components/BackButton';
+import { Card, PageShell, Section, SectionHeading } from '../components/design-system';
 
 interface Course {
     id: string;
@@ -183,19 +184,23 @@ const Courses: React.FC = () => {
         document.title = 'Courses – Andrew Jeter';
     }, []);
     return (
-        <div className="min-h-screen bg-sand text-desert-dark p-10 relative">
+        <PageShell>
             <BackButton />
-            <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="text-4xl font-bold mb-12 text-terracotta text-center"
-            >
-                Academic Journey
-            </motion.h2>
+            <Section className="pt-28">
+                <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
+                    <SectionHeading
+                        eyebrow="Courses"
+                        title="Academic journey through computer engineering."
+                    >
+                        <p>
+                            Coursework across programming, systems, hardware, graphics, circuits, algorithms, outreach,
+                            and the broader context of engineering work.
+                        </p>
+                    </SectionHeading>
+                </motion.div>
 
-            <div className="max-w-4xl mx-auto relative">
-                {/* Vertical Line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-ucsd-blue/20 hidden md:block"></div>
+                <div className="relative mx-auto mt-14 max-w-5xl">
+                <div className="absolute left-1/2 hidden h-full w-px -translate-x-1/2 bg-clay-700/15 md:block"></div>
 
                 {quarters.map((quarter, index) => (
                     <motion.div
@@ -204,46 +209,38 @@ const Courses: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
-                        className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
+                        className={`mb-12 flex flex-col items-center md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''
                             }`}
                     >
-                        {/* Content Side */}
                         <div className="w-full md:w-5/12">
-                            <div className="bg-white/40 border border-ucsd-blue/10 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                <h3 className="text-xl font-bold text-ucsd-blue mb-2">
+                            <Card className="p-6">
+                                <h3 className="mb-3 text-xl font-extrabold text-pacific-700">
                                     {quarter.term} {quarter.year}
                                 </h3>
                                 {quarter.courses.length > 0 ? (
                                     <ul className="space-y-2">
                                         {quarter.courses.map((course) => (
-                                            <li key={course.id} className="text-sm text-desert-dark/90">
-                                                <span className="font-semibold text-terracotta">{course.id}:</span> {course.title}
+                                            <li key={course.id} className="text-sm leading-6 text-text-muted">
+                                                <span className="font-extrabold text-action-primary">{course.id}:</span> {course.title}
                                             </li>
                                         ))}
                                     </ul>
                                 ) : (
-                                    <p className="text-sm text-desert-dark/50 italic">Courses to be added</p>
+                                    <p className="text-sm italic text-text-muted">Courses to be added</p>
                                 )}
-                            </div>
+                            </Card>
                         </div>
 
-                        {/* Center Dot */}
-                        <div className="w-2/12 flex justify-center my-4 md:my-0 relative z-10">
-                            <div className="w-4 h-4 bg-terracotta rounded-full border-4 border-sand shadow-sm"></div>
+                        <div className="relative z-10 my-4 flex w-2/12 justify-center md:my-0">
+                            <div className="h-4 w-4 rounded-full border-4 border-sand-50 bg-action-primary shadow-sm"></div>
                         </div>
 
-                        {/* Empty Side for Layout Balance */}
                         <div className="w-full md:w-5/12"></div>
                     </motion.div>
                 ))}
-            </div>
-
-            {/* <div className="text-center mt-12">
-                <a href="/" className="text-ucsd-blue hover:text-terracotta transition-colors underline decoration-dotted">
-                    Back to Home
-                </a>
-            </div> */}
-        </div>
+                </div>
+            </Section>
+        </PageShell>
     );
 };
 

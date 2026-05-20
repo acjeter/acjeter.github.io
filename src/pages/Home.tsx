@@ -197,7 +197,7 @@ const Home: React.FC = () => {
                 <div className="grid gap-8 md:grid-cols-[0.7fr_0.3fr] md:items-end">
                     <SectionHeading eyebrow="Featured work" title="Project work as evidence." />
                     <p className="body-copy">
-                        Each preview should show what the work proves about systems thinking, reliability, and execution.
+                        
                     </p>
                 </div>
                 <div className="mt-10 grid gap-5 md:grid-cols-[1.15fr_0.85fr]">
