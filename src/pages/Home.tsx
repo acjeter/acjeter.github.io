@@ -86,8 +86,7 @@ const Home: React.FC = () => {
                 </nav>
             </header>
 
-            <Section className="relative grid min-h-[calc(100vh-6rem)] items-center gap-14 pt-10 md:grid-cols-[1.05fr_0.95fr] md:pt-16">
-                <div className="absolute left-[58%] top-20 hidden h-[34rem] w-px bg-gold-500/40 md:block" />
+            <Section className="grid min-h-[calc(100vh-6rem)] items-center gap-14 pt-10 md:grid-cols-[minmax(0,1.05fr)_1px_minmax(0,0.95fr)] md:gap-x-10 md:pt-16">
                 <motion.div
                     initial={{ opacity: 0, y: 18 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -116,6 +115,8 @@ const Home: React.FC = () => {
                         <Badge tone="natural">Phoenix-based next chapter</Badge>
                     </div>
                 </motion.div>
+
+                <div className="hidden h-[34rem] w-px self-center bg-gold-500/40 md:block" />
 
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
