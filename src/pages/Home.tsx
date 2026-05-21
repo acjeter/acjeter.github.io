@@ -97,8 +97,7 @@ const Home: React.FC = () => {
                         Andrew Jeter
                     </h1>
                     <p className="mt-7 max-w-2xl font-display text-2xl leading-snug text-text-muted md:text-3xl">
-                        Computer Engineering senior at UC San Diego interested in dependable systems software,
-                        hardware-aware engineering, and the technical decisions that make software trustworthy.
+                        Computer Engineering senior at UC San Diego interested in creating dependable systems software, hardware-conscious engineering, and the technical decisions that make software trustworthy.
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-3">
@@ -125,8 +124,9 @@ const Home: React.FC = () => {
                     className="relative"
                 >
                     <PhotoFrame
+                        src="/images/home/headshot.png"
                         label="Square Headshot"
-                        alt="Andrew Jeter portrait placeholder"
+                        alt="Andrew Jeter headshot"
                         className="aspect-square w-full max-w-[25rem] rounded-[2.5rem] md:ml-12"
                     />
                     <div className="surface-card absolute -bottom-10 right-0 hidden w-64 rounded-[1.5rem] p-5 md:block">
@@ -140,13 +140,13 @@ const Home: React.FC = () => {
 
             <Section className="grid gap-6 pt-4 md:grid-cols-[0.82fr_0.18fr] md:items-end">
                 <PhotoFrame
+                    src="/images/home/pinkgeisel.png"
                     label="Wide UCSD / San Diego Photo"
-                    alt="UC San Diego or San Diego landscape placeholder"
+                    alt="Pink evening light on Geisel Library at UC San Diego"
                     className="min-h-[18rem] rounded-[2.75rem] md:min-h-[24rem]"
                 />
                 <p className="font-display text-xl leading-relaxed text-text-muted md:-mb-2">
-                    A place-based pause for San Diego: campus architecture, coastline light, Geisel at a good hour,
-                    or a natural scene that actually feels connected to this chapter.
+                    On a personal note, I've always loved this Geisel pic :)
                 </p>
             </Section>
 
@@ -155,7 +155,7 @@ const Home: React.FC = () => {
                     <SectionHeading eyebrow="About" title="Systems that work when details matter.">
                         <p>
                             I&apos;m drawn to the parts of computing that sit below the surface: systems software, memory,
-                            synchronization, and the engineering habits that make larger systems reliable.
+                            synchronization, and the ethical engineering habits creating reliable systems.
                         </p>
                         <p className="mt-4">
                             I am building toward software and hardware engineering leadership grounded in technical rigor,
@@ -179,8 +179,9 @@ const Home: React.FC = () => {
 
             <Section className="grid gap-5 md:grid-cols-[0.36fr_0.64fr]">
                 <PhotoFrame
+                    src="/images/home/fluffygeiselsunset.png"
                     label="Project / Hardware Visual"
-                    alt="Engineering project or hardware visual placeholder"
+                    alt="Geisel Library at sunset with soft clouds"
                     className="min-h-[16rem] rounded-[1.75rem]"
                 />
                 <div className="grid gap-4 md:grid-cols-3">
@@ -228,8 +229,7 @@ const Home: React.FC = () => {
                         <p className="eyebrow text-gold-500">Contact</p>
                         <h2 className="display-heading mt-3 text-4xl md:text-6xl">Let&apos;s connect.</h2>
                         <p className="mt-5 max-w-2xl text-sand-100/80">
-                            Reach out if you want to talk software engineering, hardware engineering, systems work, outreach,
-                            or anything connected to building dependable technology.
+                            Reach out if you want to talk software, hardware, outreach, or anything else.
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-3">
