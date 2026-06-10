@@ -1,26 +1,160 @@
 @import "tailwindcss";
 
-@theme {
-  --color-sand: #f5e6d3;
-  --color-terracotta: #c05621;
-  --color-ucsd-blue: #00629B;
-  --color-ocean: #2c7da0;
-  --color-sunset: #ed8936;
-  --color-desert-dark: #4a3b32;
-  --color-ocean-dark: #1a365d;
-  --color-sage: #8a9a5b;
+@font-face {
+  font-family: "Fraunces";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+  src: url("/fonts/fraunces-latin-variable.woff2") format("woff2-variations");
+}
 
-  --font-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+@theme {
+  --color-sand-50: #fffaf1;
+  --color-sand-100: #f7ead6;
+  --color-sand-200: #ead6ba;
+  --color-clay-500: #b9653c;
+  --color-clay-600: #9f5433;
+  --color-clay-700: #7c3f2b;
+  --color-saguaro-500: #5f7d56;
+  --color-saguaro-700: #405b3c;
+  --color-pacific-500: #2f6f8f;
+  --color-pacific-700: #1f4f66;
+  --color-gold-500: #c5964a;
+  --color-ink-900: #1f2522;
+  --color-stone-500: #877b6d;
+  --color-white-soft: #fffefd;
+
+  --color-sand: var(--color-sand-100);
+  --color-terracotta: var(--color-clay-500);
+  --color-ucsd-blue: var(--color-pacific-500);
+  --color-ocean: var(--color-pacific-500);
+  --color-sunset: var(--color-gold-500);
+  --color-desert-dark: var(--color-ink-900);
+  --color-ocean-dark: var(--color-pacific-700);
+  --color-sage: var(--color-saguaro-500);
+
+  --color-background-canvas: var(--color-sand-50);
+  --color-background-surface: var(--color-white-soft);
+  --color-background-muted: var(--color-sand-100);
+  --color-text-primary: var(--color-ink-900);
+  --color-text-muted: #51483f;
+  --color-action-primary: var(--color-clay-500);
+  --color-action-primary-hover: var(--color-clay-700);
+  --color-action-secondary: var(--color-pacific-500);
+  --color-accent-natural: var(--color-saguaro-500);
+  --color-accent-warm: var(--color-gold-500);
+
+  --shadow-soft-desert: 0 24px 80px -48px rgb(124 63 43 / 0.55);
+  --shadow-card: 0 24px 70px -52px rgb(31 37 34 / 0.6);
+  --radius-panel: 2rem;
+  --radius-card: 1.75rem;
+  --radius-pill: 999px;
+
+  --font-sans: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.5;
   font-weight: 400;
+  color: var(--color-text-primary);
+  background: var(--color-background-canvas);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+::selection {
+  background: rgb(185 101 60 / 0.24);
+}
+
+:focus-visible {
+  outline: 3px solid rgb(197 150 74 / 0.7);
+  outline-offset: 4px;
+}
+
+@layer components {
+  .app-canvas {
+    min-height: 100vh;
+    background:
+      linear-gradient(90deg, rgb(47 111 143 / 0.07) 1px, transparent 1px),
+      linear-gradient(0deg, rgb(47 111 143 / 0.05) 1px, transparent 1px),
+      radial-gradient(circle at 8% 9%, rgb(47 111 143 / 0.14), transparent 24rem),
+      radial-gradient(circle at 90% 0%, rgb(197 150 74 / 0.14), transparent 30rem),
+      linear-gradient(135deg, var(--color-sand-50), var(--color-sand-100) 55%, #f1dfc5);
+    background-size:
+      72px 72px,
+      72px 72px,
+      auto,
+      auto,
+      auto;
+    color: var(--color-text-primary);
+  }
+
+  .section-shell {
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .surface-card {
+    border: 1px solid rgb(124 63 43 / 0.14);
+    background: rgb(255 254 253 / 0.72);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(18px);
+  }
+
+  .eyebrow {
+    color: var(--color-action-primary);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .display-heading {
+    font-family: var(--font-display);
+    letter-spacing: -0.045em;
+    line-height: 0.96;
+  }
+
+  .body-copy {
+    color: var(--color-text-muted);
+    font-size: clamp(1rem, 1.8vw, 1.125rem);
+    line-height: 1.75;
+  }
+
+  .focus-ring {
+    transition:
+      color 180ms ease,
+      background-color 180ms ease,
+      border-color 180ms ease,
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .focus-ring:hover {
+    transform: translateY(-1px);
+  }
 }

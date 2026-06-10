@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import BackButton from '../components/BackButton';
+import { Badge, Card, PageShell, Section, SectionHeading, TextLink } from '../components/design-system';
 
 interface Project {
     title: string;
@@ -13,6 +13,7 @@ interface Project {
     linkText: string;
 }
 
+// Canonical project copy lives here; homepage featured cards should stay shorter but consistent.
 const projects: Project[] = [
     // Portfolio Website
     {
@@ -28,7 +29,7 @@ const projects: Project[] = [
     {
         title: 'CSE 198: HKN Outreach Course Website',
         status: 'Active',
-        description: 'A course website for CSE 198: HKN Outreach, a course that enables students to develop and present CSE lessons to socioeconomically disavantaged K-12 San Diego students. The website is built using JustTheDocs, a Jekyll theme for documentation websites.',
+        description: 'A course website for CSE 198: HKN Outreach, a course that enables students to develop and present CSE lessons to socioeconomically disadvantaged K-12 San Diego students. The website is built using JustTheDocs, a Jekyll theme for documentation websites.',
         tags: ['JustTheDocs', 'Markdown', 'Jekyll', 'HTML', 'GitHub Pages'],
         affiliation: 'CSE 198: HKN Outreach',
         link: 'https://www.andrewcjeter.com/cse198-sp26',
@@ -38,8 +39,8 @@ const projects: Project[] = [
     {
         title: 'HoloLens ASL Translator',
         status: 'Completed',
-        description: 'A HoloLens application built to translate specific American Sign Language into text using computer vision and machine learning. Our AI model was trained on a dataset of ASL frames, and we are currently in the process of refining it to be able to train on our own dataset generated from the HoloLens. Our HoloLens team is working on utilizing a geofenced box as a space for where the ASL input data will be collected. Another primary learning objective is to efficiently develop our project in a team following Agile with Scrum methodology, and using GitLab for version control.',
-        tags: ['Python', 'Unity', 'HoloLens', 'HTML', 'TCP/IP', 'Machine Learning', 'Agile', 'Scrum', 'Git', 'GitLab'],
+        description: 'A Microsoft HoloLens 2 application exploring ASL translation with computer vision, Unity, and team-based Agile development. The project used trained ASL frame data and investigated how HoloLens-captured input could be constrained and processed for translation.',
+        tags: ['Python', 'Unity', 'Microsoft HoloLens 2', 'HTML', 'TCP/IP', 'Machine Learning', 'Agile', 'Scrum', 'Git', 'GitLab'],
         affiliation: 'CSE 118 Ubiquitous Computing Final Project',
         link: 'https://github.com/acjeter/CSE118_Final_Project',
         linkText: 'View Source Code on GitHub'
@@ -73,7 +74,7 @@ const projects: Project[] = [
         tags: ['C++', 'C', 'OpenGL', 'Computer Graphics'],
         affiliation: 'CSE 167 Computer Graphics Final Project',
         link: 'https://github.com/acjeter/CSE167_Final_Project',
-        linkText: 'Available on Request; Unable to Publicly Share.'
+        linkText: 'View Source Code on GitHub'
     },
     // ECE 111 Final Project
     {
@@ -94,66 +95,74 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-sand text-desert-dark p-10 relative">
+        <PageShell>
             <BackButton />
-            <motion.h2
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="text-4xl font-bold mb-8 text-terracotta text-center"
-            >
-                Projects
-            </motion.h2>
-            <div className="max-w-4xl mx-auto">
+            <Section className="pt-28">
+                <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}>
+                    <SectionHeading
+                        eyebrow="Projects"
+                        title="Engineering work across software, systems, and hardware."
+                    >
+                        <p>
+                            A selection of personal, academic, and team projects spanning web interfaces, mixed reality,
+                            computer architecture, graphics, and digital design.
+                        </p>
+                    </SectionHeading>
+                </motion.div>
+
+                <div className="mt-10 grid gap-6">
                 {projects.map((project, index) => (
                     <motion.div
                         key={project.title}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 + index * 0.1 }}
-                        className="bg-white/40 border border-ucsd-blue/30 rounded-xl overflow-hidden hover:bg-white/60 transition-colors duration-300 mb-8 shadow-sm"
                     >
-                        <div className="p-8">
-                            <div className="flex justify-between items-start mb-4">
-                                <h3 className="text-2xl font-bold text-desert-dark">{project.title}</h3>
-                                <span className={`px-3 py-1 text-xs font-medium text-white rounded-full ${project.status === 'Active' ? 'bg-ucsd-blue' :
-                                    project.status === 'Completed' ? 'bg-sage' : 'bg-terracotta'
-                                    }`}>
+                        <Card className="transition hover:-translate-y-1">
+                            <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                                <div>
+                                    <p className="eyebrow mb-2">{project.affiliation}</p>
+                                    <h3 className="display-heading text-3xl text-ink-900 md:text-4xl">{project.title}</h3>
+                                </div>
+                                <Badge tone={project.status === 'Active' ? 'cool' : project.status === 'Completed' ? 'natural' : 'warm'}>
                                     {project.status}
-                                </span>
+                                </Badge>
                             </div>
-                            <p className="text-desert-dark/80 mb-6 leading-relaxed">
-                                {project.affiliation}
-                            </p>
-                            <p className="text-desert-dark/80 mb-6 leading-relaxed">
+                            <p className="mt-5 max-w-4xl leading-8 text-text-muted">
                                 {project.description}
                             </p>
-                            <div className="flex flex-wrap gap-2 mb-6">
+                            <div className="mt-6 flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="px-2 py-1 text-xs border border-ucsd-blue text-ucsd-blue font-medium rounded">
-                                        {tag}
-                                    </span>
+                                    <Badge key={tag}>{tag}</Badge>
                                 ))}
                             </div>
-                            <div className="flex gap-4">
-                                <Link to={project.link} target="_blank" rel="noopener noreferrer" className="text-terracotta hover:text-sunset font-medium transition-colors">
+                            <div className="mt-7">
+                                {/* Academic-integrity-sensitive projects can stay listed without forcing a dead link. */}
+                                {project.link ? (
+                                    <TextLink href={project.link} target="_blank" rel="noopener noreferrer">
+                                        {project.linkText}
+                                    </TextLink>
+                                ) : (
+                                    <span className="font-bold text-text-muted">
                                     {project.linkText}
-                                </Link>
+                                    </span>
+                                )}
                             </div>
-                        </div>
+                        </Card>
                     </motion.div>
                 ))}
+                </div>
 
-                {/* Placeholder for future projects */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="text-center text-desert-dark/40 py-12 border-t border-desert-dark/10"
+                    className="mt-12 border-t border-clay-700/10 py-12 text-center text-text-muted"
                 >
-                    <p>More projects coming soon...</p>
+                    <p>Additional work will be added as it is ready to share.</p>
                 </motion.div>
-            </div>
-        </div>
+            </Section>
+        </PageShell>
     );
 };
 
