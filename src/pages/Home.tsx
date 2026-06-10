@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Terminal from '../components/Terminal';
 import { Badge, ButtonLink, Card, PageShell, PhotoFrame, Section, SectionHeading, TextLink } from '../components/design-system';
 
+// Homepage field notes translate personal-statement themes into concise UI annotations.
 const annotations = [
     {
         title: 'Reliability',
@@ -22,6 +23,7 @@ const annotations = [
     },
 ];
 
+// Keep these summaries factual and aligned with the canonical project entries in Projects.tsx.
 const featuredProjects = [
     {
         title: 'Portfolio Website',
@@ -43,6 +45,7 @@ const featuredProjects = [
     },
 ];
 
+// Staggered principles for the photo-and-copy section; these should stay short enough to scan.
 const highlights = [
     {
         title: 'Dependable systems',
@@ -58,6 +61,7 @@ const highlights = [
     },
 ];
 
+// Tone names map content intent to semantic design-system colors.
 const toneClasses = {
     warm: 'border-clay-500/30 bg-white-soft/80 text-clay-700',
     natural: 'border-saguaro-500/30 bg-white-soft/80 text-saguaro-700',
@@ -71,6 +75,7 @@ const Home: React.FC = () => {
 
     return (
         <PageShell>
+            {/* Ambient washes keep the blueprint grid warm without competing with the content. */}
             <div className="pointer-events-none absolute left-[-10rem] top-24 h-80 w-80 rounded-full bg-pacific-500/12 blur-3xl" />
             <div className="pointer-events-none absolute right-[-8rem] top-0 h-96 w-96 rounded-full bg-gold-500/14 blur-3xl" />
 
@@ -86,6 +91,7 @@ const Home: React.FC = () => {
                 </nav>
             </header>
 
+            {/* The desktop hero uses an explicit text/divider/photo grid so the divider stays centered. */}
             <Section className="grid min-h-[calc(100vh-6rem)] items-center gap-14 pt-10 md:grid-cols-[minmax(0,1.05fr)_1px_minmax(0,0.95fr)] md:gap-x-10 md:pt-16">
                 <motion.div
                     initial={{ opacity: 0, y: 18 }}
@@ -138,6 +144,7 @@ const Home: React.FC = () => {
                 </motion.div>
             </Section>
 
+            {/* This wide image is the San Diego/UCSD story beat before the page turns technical. */}
             <Section className="grid gap-6 pt-4 md:grid-cols-[0.82fr_0.18fr] md:items-end">
                 <PhotoFrame
                     src="/images/home/pinkgeisel.png"
@@ -150,6 +157,7 @@ const Home: React.FC = () => {
                 </p>
             </Section>
 
+            {/* About copy keeps the personal-statement influence thematic rather than autobiographical. */}
             <Section id="about" className="grid gap-10 md:grid-cols-[0.95fr_1.05fr]">
                 <div>
                     <SectionHeading eyebrow="About" title="Systems that work when details matter.">
@@ -177,6 +185,7 @@ const Home: React.FC = () => {
                 </div>
             </Section>
 
+            {/* Asymmetry here keeps the proof points from feeling like a generic three-card grid. */}
             <Section className="grid gap-5 md:grid-cols-[0.36fr_0.64fr]">
                 <PhotoFrame
                     src="/images/home/fluffygeiselsunset.png"
