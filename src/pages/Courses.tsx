@@ -22,6 +22,7 @@ interface Quarter {
     courses: Course[];
 }
 
+// Chronological source for the academic timeline; keep future edits data-only when possible.
 const quarters: Quarter[] = [
     {
         term: 'Fall',
@@ -200,6 +201,7 @@ const Courses: React.FC = () => {
                 </motion.div>
 
                 <div className="relative mx-auto mt-14 max-w-5xl">
+                {/* Desktop timeline spine; mobile keeps the same data in a single-column reading order. */}
                 <div className="absolute left-1/2 hidden h-full w-px -translate-x-1/2 bg-clay-700/15 md:block"></div>
 
                 {quarters.map((quarter, index) => (

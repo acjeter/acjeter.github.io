@@ -10,8 +10,10 @@ type LinkTarget = {
     rel?: string;
 };
 
+// Merge Tailwind utilities safely so callers can override primitive defaults without class conflicts.
 const cx = (...classes: Array<string | false | null | undefined>) => twMerge(clsx(classes));
 
+// PageShell owns the global canvas treatment; pages should compose sections inside it.
 export const PageShell: React.FC<{
     children: React.ReactNode;
     className?: string;
@@ -64,6 +66,7 @@ export const ButtonLink: React.FC<
         className?: string;
     }
 > = ({ children, variant = 'primary', className, to, href, target, rel }) => {
+    // One CTA API supports both router links and external anchors.
     const sharedClassName = cx(
         'focus-ring inline-flex min-h-11 items-center justify-center rounded-[var(--radius-pill)] px-5 py-3 text-sm font-extrabold shadow-[var(--shadow-soft-desert)]',
         variant === 'primary' && 'bg-action-primary text-white-soft hover:bg-action-primary-hover',
@@ -111,6 +114,7 @@ export const PhotoFrame: React.FC<{
         {src ? (
             <img src={src} alt={alt} className={cx('h-full w-full object-cover', imageClassName)} />
         ) : (
+            // Placeholder state keeps layout stable while final personal photos are still being selected.
             <div className="flex h-full min-h-52 items-center justify-center bg-gradient-to-br from-sand-200 via-sand-100 to-pacific-500/20 p-6 text-center">
                 <span className="eyebrow text-clay-700">{label}</span>
             </div>
