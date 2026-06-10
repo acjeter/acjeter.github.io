@@ -68,6 +68,61 @@ const toneClasses = {
     cool: 'border-pacific-500/30 bg-white-soft/80 text-pacific-700',
 };
 
+const systemTokens = [
+    { label: 'sand', className: 'bg-sand-100' },
+    { label: 'clay', className: 'bg-clay-500' },
+    { label: 'pacific', className: 'bg-pacific-500' },
+    { label: 'saguaro', className: 'bg-saguaro-500' },
+    { label: 'gold', className: 'bg-gold-500' },
+    { label: 'ink', className: 'bg-ink-900' },
+];
+
+const systemControls = [
+    { label: 'contrast', value: '78%', className: 'w-[78%] bg-ink-900' },
+    { label: 'spacing', value: '64px', className: 'w-[58%] bg-clay-500' },
+    { label: 'radius', value: '28px', className: 'w-[68%] bg-pacific-500' },
+];
+
+const DesignSystemPreview: React.FC = () => (
+    <div
+        aria-hidden="true"
+        className="mt-8 overflow-hidden rounded-[1.5rem] border border-clay-700/15 bg-sand-50/70 p-4 shadow-[inset_0_1px_0_rgb(255_255_255/0.65)]"
+    >
+        <div className="flex items-start justify-between gap-4">
+            <div>
+                <p className="font-mono text-[0.65rem] uppercase tracking-[0.22em] text-action-primary">Refined Sonoran Coast</p>
+                <p className="mt-2 font-display text-3xl font-semibold leading-none text-ink-900">Aa</p>
+            </div>
+            <div className="rounded-full border border-pacific-500/20 bg-white-soft/70 px-3 py-1 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-pacific-700">
+                palette / type / rhythm
+            </div>
+        </div>
+
+        <div className="mt-5 grid grid-cols-6 gap-2">
+            {systemTokens.map((token) => (
+                <div key={token.label} className="min-w-0">
+                    <div className={`h-9 rounded-full border border-ink-900/10 ${token.className}`} />
+                    <p className="mt-2 truncate font-mono text-[0.58rem] uppercase tracking-[0.12em] text-text-muted">{token.label}</p>
+                </div>
+            ))}
+        </div>
+
+        <div className="mt-6 space-y-4 rounded-[1.25rem] border border-pacific-500/15 bg-white-soft/65 p-4">
+            {systemControls.map((control) => (
+                <div key={control.label}>
+                    <div className="mb-2 flex items-center justify-between font-mono text-[0.65rem] uppercase tracking-[0.16em] text-text-muted">
+                        <span>{control.label}</span>
+                        <span>{control.value}</span>
+                    </div>
+                    <div className="h-2 rounded-full bg-sand-200">
+                        <div className={`h-full rounded-full ${control.className}`} />
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+);
+
 const Home: React.FC = () => {
     useEffect(() => {
         document.title = 'Home – Andrew Jeter';
@@ -219,6 +274,7 @@ const Home: React.FC = () => {
                         >
                             <h3 className="display-heading text-4xl font-semibold text-ink-900">{project.title}</h3>
                             <p className="mt-4 flex-1 leading-8 text-text-muted">{project.description}</p>
+                            {project.title === 'Portfolio Website' ? <DesignSystemPreview /> : null}
                             <div className="mt-6 flex flex-wrap gap-2">
                                 {project.tags.map((tag) => (
                                     <Badge key={tag}>{tag}</Badge>
