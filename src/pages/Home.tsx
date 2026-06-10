@@ -190,10 +190,12 @@ const Home: React.FC = () => {
                         alt="Andrew Jeter headshot"
                         className="aspect-square w-full max-w-[25rem] rounded-[2.5rem] md:ml-12"
                     />
-                    <div className="surface-card absolute -bottom-10 right-0 hidden w-64 rounded-[1.5rem] p-5 md:block">
-                        <p className="font-mono text-xs uppercase tracking-[0.22em] text-action-primary">Reliability</p>
-                        <p className="mt-3 text-sm leading-6 text-text-muted">
-                            Small implementation choices shape larger systems.
+                    <div className="mt-4 max-w-sm rounded-[1.125rem] border border-clay-700/12 bg-white-soft/70 px-4 py-3 shadow-[0_18px_50px_-38px_rgb(31_37_34/0.6)] backdrop-blur-md md:absolute md:-bottom-6 md:right-0 md:mt-0 md:w-[24rem] md:max-w-none">
+                        <p className="font-display text-base leading-relaxed text-text-muted">
+                            <span className="md:whitespace-nowrap">&ldquo;You never fail until you stop trying.&rdquo;</span>
+                            <span className="mt-2 block font-mono text-[0.65rem] font-bold uppercase tracking-[0.16em] text-clay-700">
+                                - Albert Einstein
+                            </span>
                         </p>
                     </div>
                 </motion.div>
