@@ -13,6 +13,7 @@ interface Project {
     linkText: string;
 }
 
+// Canonical project copy lives here; homepage featured cards should stay shorter but consistent.
 const projects: Project[] = [
     // Portfolio Website
     {
@@ -136,6 +137,7 @@ const Projects: React.FC = () => {
                                 ))}
                             </div>
                             <div className="mt-7">
+                                {/* Academic-integrity-sensitive projects can stay listed without forcing a dead link. */}
                                 {project.link ? (
                                     <TextLink href={project.link} target="_blank" rel="noopener noreferrer">
                                         {project.linkText}
@@ -157,7 +159,7 @@ const Projects: React.FC = () => {
                     transition={{ delay: 0.4 }}
                     className="mt-12 border-t border-clay-700/10 py-12 text-center text-text-muted"
                 >
-                    <p>More projects coming soon...</p>
+                    <p>Additional work will be added as it is ready to share.</p>
                 </motion.div>
             </Section>
         </PageShell>

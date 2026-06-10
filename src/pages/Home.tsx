@@ -160,10 +160,10 @@ const Home: React.FC = () => {
             {/* About copy keeps the personal-statement influence thematic rather than autobiographical. */}
             <Section id="about" className="grid gap-10 md:grid-cols-[0.95fr_1.05fr]">
                 <div>
-                    <SectionHeading eyebrow="About" title="Systems that work when details matter.">
+                    <SectionHeading eyebrow="About" title="I'm passionate about crafting reliable systems users can trust.">
                         <p>
                             I&apos;m drawn to the parts of computing that sit below the surface: systems software, memory,
-                            synchronization, and the ethical engineering habits creating reliable systems.
+                            synchronization, and the engineering habits that make larger systems reliable.
                         </p>
                         <p className="mt-4">
                             I am building toward software and hardware engineering leadership grounded in technical rigor,
@@ -206,9 +206,9 @@ const Home: React.FC = () => {
 
             <Section id="featured">
                 <div className="grid gap-8 md:grid-cols-[0.7fr_0.3fr] md:items-end">
-                    <SectionHeading eyebrow="Featured work" title="Project work as evidence." />
+                    <SectionHeading eyebrow="Featured work" title="Selected work, with context." />
                     <p className="body-copy">
-                        
+                        A few projects that show how I think across interfaces, mixed reality, architecture, and verification.
                     </p>
                 </div>
                 <div className="mt-10 grid gap-5 md:grid-cols-[1.15fr_0.85fr]">
@@ -238,7 +238,7 @@ const Home: React.FC = () => {
                         <p className="eyebrow text-gold-500">Contact</p>
                         <h2 className="display-heading mt-3 text-4xl md:text-6xl">Let&apos;s connect.</h2>
                         <p className="mt-5 max-w-2xl text-sand-100/80">
-                            Reach out if you want to talk software, hardware, outreach, or anything else.
+                            Reach out if you want to talk software, hardware, outreach, or dependable systems work.
                         </p>
                     </div>
                     <div className="flex flex-wrap gap-3">

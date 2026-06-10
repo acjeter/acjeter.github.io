@@ -43,6 +43,7 @@ const Terminal: React.FC = () => {
         const cleanCmd = cmd.trim().toLowerCase();
         let output: React.ReactNode = '';
 
+        // The terminal is a small personality layer, so commands mirror primary site destinations.
         switch (cleanCmd) {
             case 'help':
                 output = (
@@ -52,7 +53,6 @@ const Terminal: React.FC = () => {
                         <span className="text-terracotta font-bold">projects</span> - View my work
                         <span className="text-terracotta font-bold">contact</span> - Get in touch
                         <span className="text-terracotta font-bold">clear</span> - Clear the terminal
-                        <span className="text-terracotta font-bold">game</span> - Start a mini-game (Coming Soon)
                     </div>
                 );
                 break;
@@ -75,7 +75,7 @@ const Terminal: React.FC = () => {
                 return;
             case 'gui':
                 output = "Navigating to Projects...";
-                // In a real app we might use router navigation here, but for now just text
+                // This component lives outside route context, so use a full-page navigation for now.
                 window.location.href = '/projects';
                 break;
             case '':
