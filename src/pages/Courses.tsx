@@ -9,6 +9,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import BackButton from '../components/BackButton';
+import { PageShell } from '../components/design-system';
 import { quarters, type Course } from '../data/academics';
 import { getSkillsByIds } from '../data/skills';
 
@@ -116,14 +117,14 @@ const Courses = () => {
   };
 
   return (
-    <div className="min-h-screen bg-sand text-desert-dark p-6 md:p-10 relative">
+    <PageShell>
       <BackButton />
 
-      <main className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6 py-20 pt-28 text-desert-dark md:px-10">
         <motion.header
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mx-auto mb-10 max-w-4xl pt-8 text-center"
+          className="mx-auto mb-10 max-w-4xl text-center"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-ucsd-blue/75">UC San Diego Computer Engineering</p>
           <h1 className="mt-4 text-4xl font-bold text-terracotta md:text-5xl">Academic Journey</h1>
@@ -250,8 +251,8 @@ const Courses = () => {
             })}
           </div>
         </section>
-      </main>
-    </div>
+      </div>
+    </PageShell>
   );
 };
 
