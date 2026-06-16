@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Terminal from '../components/Terminal';
+import SkillCloud from '../components/SkillCloud';
 import { Badge, ButtonLink, Card, PageShell, PhotoFrame, Section, SectionHeading, TextLink } from '../components/design-system';
+import { skills } from '../data/skills';
 
 // Homepage field notes translate personal-statement themes into concise UI annotations.
 const annotations = [
@@ -259,6 +261,16 @@ const Home: React.FC = () => {
                         </div>
                     ))}
                 </div>
+            </Section>
+
+            <Section id="skills">
+                <Card className="bg-white-soft/55">
+                    <SkillCloud
+                        skills={skills}
+                        title="Technical Competencies"
+                        description="A practical map of the programming, systems, hardware, lab, and engineering practices I have built through coursework and projects."
+                    />
+                </Card>
             </Section>
 
             <Section id="featured">
