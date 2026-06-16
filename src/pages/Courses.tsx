@@ -26,7 +26,7 @@ const CourseCard = ({ course, quarterLabel }: CourseCardProps) => {
   const panelId = `${quarterLabel}-${course.code}`.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
 
   return (
-    <article className="group rounded-lg border border-ucsd-blue/15 bg-white/45 p-5 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-terracotta/30 hover:bg-white/70 hover:shadow-md focus-within:border-terracotta/40">
+    <article className="group rounded-lg border border-ucsd-blue/15 bg-white-soft p-5 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-terracotta/30 hover:shadow-md focus-within:border-terracotta/40">
       <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-ucsd-blue/70">{quarterLabel}</p>
@@ -65,7 +65,7 @@ const CourseCard = ({ course, quarterLabel }: CourseCardProps) => {
 
           <div className="mt-4 flex flex-wrap gap-2">
             {courseSkills.map((skill) => (
-              <span key={skill.id} className="rounded-full border border-ucsd-blue/20 bg-sand/70 px-3 py-1 text-xs font-medium text-ucsd-blue">
+              <span key={skill.id} className="rounded-full border border-ucsd-blue/20 bg-sand-100 px-3 py-1 text-xs font-medium text-ucsd-blue">
                 {skill.label}
               </span>
             ))}
@@ -229,7 +229,7 @@ const Courses = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-100px' }}
                   transition={{ delay: index * 0.03 }}
-                  className="scroll-mt-8 rounded-xl border border-clay-700/12 bg-white/20 p-5 shadow-sm focus:outline-none focus:ring-2 focus:ring-terracotta/30 md:p-6"
+                  className="scroll-mt-8 rounded-xl border border-clay-700/12 bg-white-soft p-5 shadow-card focus:outline-none focus:ring-2 focus:ring-terracotta/30 md:p-6"
                 >
                   <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
                     <div>
