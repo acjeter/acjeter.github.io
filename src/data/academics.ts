@@ -498,6 +498,13 @@ export const quarters: Quarter[] = [
     year: '2026',
     courses: [
       {
+        code: 'CSE 120',
+        title: 'Operating Systems Principles',
+        summary: 'Introduces operating systems concepts, including processes, synchronization, scheduling, memory management, virtual memory, file systems, and protection. May be coscheduled with CSE 220.',
+        skillIds: ['operating-systems', 'synchronization', 'memory-management', 'file-systems', 'problem-solving'],
+        sourceUrl: catalog.cse2025,
+      },
+      {
         code: 'ECE 109',
         title: 'Engineering Probability and Statistics',
         summary: 'Axioms of probability, conditional probability, theorem of total probability, random variables, densities, expected values, characteristic functions, transformation of random variables, central limit theorem. Random number generation, engineering reliability, elements of estimation, random sampling, sampling distributions, tests for hypothesis.',

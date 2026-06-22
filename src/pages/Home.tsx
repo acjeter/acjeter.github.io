@@ -160,7 +160,7 @@ const Home: React.FC = () => {
                         Andrew Jeter
                     </h1>
                     <p className="mt-7 max-w-2xl font-display text-2xl leading-snug text-text-muted md:text-3xl">
-                        Computer Engineering senior at UC San Diego interested in creating dependable systems software, hardware-conscious engineering, and the technical decisions that make software trustworthy.
+                        Recently graduated with a B.S. in Computer Engineering from UC San Diego. I'm interested in creating dependable systems software and the technical decisions building trustworthy software.
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-3">
@@ -173,8 +173,8 @@ const Home: React.FC = () => {
 
                     <div className="mt-8 flex flex-wrap gap-3">
                         <Badge tone="cool">UC San Diego</Badge>
-                        <Badge tone="warm">Raytheon Summer 2026</Badge>
-                        <Badge tone="natural">Phoenix-based next chapter</Badge>
+                        <Badge tone="warm">Incoming @ Raytheon</Badge>
+                        <Badge tone="natural">Mesa, AZ</Badge>
                     </div>
                 </motion.div>
 
@@ -277,7 +277,7 @@ const Home: React.FC = () => {
                 <div className="grid gap-8 md:grid-cols-[0.7fr_0.3fr] md:items-end">
                     <SectionHeading eyebrow="Featured work" title="Selected work, with context." />
                     <p className="body-copy">
-                        A few projects that show how I think across interfaces, mixed reality, architecture, and verification.
+                        A few projects that show how I think across interfaces, people, mixed reality, architecture, and verification.
                     </p>
                 </div>
                 <div className="mt-10 grid gap-5 md:grid-cols-[1.15fr_0.85fr]">
