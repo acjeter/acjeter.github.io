@@ -36,7 +36,7 @@ export const quarters: Quarter[] = [
     courses: [
       {
         code: 'CSE 8A',
-        title: 'Introduction to Programming 1',
+        title: 'Introduction to Programming and Computational Problem-Solving I',
         summary: 'Introductory course for students interested in computer science and programming. Basics of programming including variables, conditionals, loops, functions/methods. Structured data storage such as arrays/lists and dictionaries, including data mutation. Hands-on experience with designing, writing, hand-tracing, compiling or interpreting, executing, testing, and debugging programs. Students solve relevant computational problems using a high-level programming language.',
         skillIds: ['programming-fundamentals', 'debugging', 'problem-solving'],
         sourceUrl: catalog.cse2025,
@@ -70,7 +70,7 @@ export const quarters: Quarter[] = [
     courses: [
       {
         code: 'CSE 8B',
-        title: 'Introduction to Programming 2',
+        title: 'Introduction to Programming and Computational Problem-Solving II',
         summary: 'Introductory programming using an object-oriented approach with the Java programming language. Builds on basic programming constructs introduced in CSE 8A to introduce class design and use, interfaces, basic class hierarchies, recursion, event-based programming, error reporting with exceptions, and file I/O. Basics of command-line navigation for file management and running programs. Development, testing, and debugging of more complex programs.',
         skillIds: ['java', 'debugging', 'documentation'],
         sourceUrl: catalog.cse2025,
