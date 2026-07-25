@@ -57,7 +57,7 @@ const Terminal: React.FC = () => {
                 );
                 break;
             case 'about':
-                output = "Hi, I'm Andrew: a Computer Engineering student at UC San Diego focused on software, hardware, systems thinking, and engineering leadership.";
+                output = "Hi! I'm Andrew, a Computer Engineer focused on software, hardware, systems thinking, and engineering leadership. I recently graduated with my B.S. in Computer Engineering from UC San Diego.";
                 break;
             case 'projects':
                 output = (
