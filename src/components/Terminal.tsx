@@ -68,7 +68,7 @@ const Terminal: React.FC = () => {
                 );
                 break;
             case 'contact':
-                output = "Email me at: andrewcjeter@gmail.com";
+                output = "Email me at: andrewcjeter (at) gmail (dot) com";
                 break;
             case 'clear':
                 setHistory([]);
